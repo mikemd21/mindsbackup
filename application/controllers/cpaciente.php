@@ -13,9 +13,10 @@ class Cpaciente extends CI_Controller
         $this->load->model('mfamiliar');
 	}
 	public function index(){
-		$data['act'] = 'P';
-		$this->load->view('layout/header2',$data);
-		$this->load->view('layout/registrar_paciente');
+		$data = $this->mpaciente->getPaciente($this->session->userdata('s_id_persona'));
+
+		$this->load->view('layout/header2');
+		$this->load->view('layout/registrar_paciente',$data);
 		$this->load->view('layout/footer');
 	}
 
