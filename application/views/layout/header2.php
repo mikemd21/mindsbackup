@@ -39,8 +39,8 @@
             <ul class="navbar-nav ml-auto">
               <!-- Link-->
               <li class="nav-item"> <a href="<?php echo base_url();?>cpaciente" class="nav-link ">Paciente</a></li>
-              <li class="nav-item"> <a href="index.html" class="nav-link">Actividades</a></li>
-              <li class="nav-item"> <a href="#" data-toggle="modal" data-target="#login" class="nav-link ">Agenda</a></li>
+              <li class="nav-item"> <a href="<?php echo base_url();?>cactividad" class="nav-link">Actividades</a></li>
+              <li class="nav-item"> <a href="<?php echo base_url();?>cagenda" class="nav-link ">Agenda</a></li>
               <!-- Link-->
 
             </ul><a href="<?php echo base_url();?>" class="btn btn-link navbar-btn ml-0"><?php echo $this->session->userdata('s_persona');
