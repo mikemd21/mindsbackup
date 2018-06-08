@@ -41,12 +41,10 @@
               <li class="nav-item"> <a href="<?php echo base_url();?>cpaciente" class="nav-link ">Paciente</a></li>
               <li class="nav-item"> <a href="index.html" class="nav-link">Actividades</a></li>
               <li class="nav-item"> <a href="#" data-toggle="modal" data-target="#login" class="nav-link ">Agenda</a></li>
-              <li class="nav-item"> <a href="<?php echo base_url();?>" class="nav-link active">Cerrar sesión</a></li>
+              <li class="nav-item"> <a href="<?php echo base_url();?>" class="nav-link active">Salir</a></li>
               <!-- Link-->
 
-            </ul><a href="<?php echo base_url();?>"class="btn btn-primary navbar-btn ml-0 ml-lg-3"><?php
-        echo $this->session->userdata('s_persona');
-         ?></a>
+            </ul>
           </div>
         </div>
       </nav>

@@ -10,7 +10,6 @@ class Cpaciente extends CI_Controller
 		parent::__construct();
 		$this->load->model('mpersona');
 		$this->load->model('mpaciente');
-		$this->load->library('encrypt');
 	}
 	public function index(){
 		$data['mensaje'] = ' ';
@@ -24,12 +23,14 @@ class Cpaciente extends CI_Controller
 		$param['nombre'] = $this->input->post('txtNombre');
 		$param['apellidop'] = $this->input->post('txtApPaterno');
 		$param['apellidom'] = $this->input->post('txtApMaterno');
+        $param['emailp'] = '';
+        $param['clavep'] = '';
 		//Datos Usuario
 		$lastId = $this->mpersona->guardar($param);
 		$data['mensaje'] = ' ';
 
-		$this->load->view('layout/header');
-		$this->load->view('index',$data);
+		$this->load->view('layout/header',$data);
+		$this->load->view('index');
 		$this->load->view('layout/footer');
 
 		// Datos del paciente

@@ -1,8 +1,8 @@
 <section>
       <div class="container">
         <header class="section-header">
-          <h2 class="mb-2">Rellene el siguiente formulario:</h2>
-          <p class="lead">Almacenaos la información personal.</p>
+          <h2 class="mb-2">Paciente</h2>
+          <p class="lead">Rellene el siguiente formulario:</p>
         </header>
         <div class="row align-items-center mt-8">
           <div class="col-lg-9">

@@ -19,7 +19,7 @@ class Clogin extends CI_Controller
 	}
 	public function ingresar(){
 		$email = $this->input->post('txtEmail');
-		$pass = $this->input->post('txtPassword');
+		$pass = sha1($this->input->post('txtPassword'));
 
 		$result = $this->mlogin->ingresar($email,$pass);
 
