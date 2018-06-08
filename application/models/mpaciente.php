@@ -16,6 +16,8 @@ class Mpaciente extends CI_Model
 			'id_persona' => $param['idPersona'],
 		);
 		$this->db->insert('paciente',$campos);
+
+        return true;
 	}
 	public function eliminarUsuario($idP){
  		$campos = array('idPersona' => $idP);

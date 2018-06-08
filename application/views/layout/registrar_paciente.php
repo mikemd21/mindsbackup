@@ -4,10 +4,12 @@
           <h2 class="mb-2">Paciente</h2>
           <p class="lead">Rellene el siguiente formulario:</p>
         </header>
+        <span id="alert_action"></span>
         <div class="row align-items-center mt-8">
           <div class="col-lg-9">
-            <form action="<?php echo base_url();?>cpaciente/guardar" method="POST"  class="login-form text-leftt">
+            <form action="<?php echo base_url();?>cpaciente/guardar" method="POST" id="rpform" class="login-form text-left">
               <div class="form-group mb-4">
+               <span id="alert_action"></span>
                 <label>Nombres<sup class="text-primary">&#10033;</sup></label>
                 <input type="text" name="txtNombre" placeholder="Arturo" class="form-control">
               </div>
@@ -27,9 +29,9 @@
                 <label>Genero<sup class="text-primary">&#10033;</sup></label>
                 <select name="txtGenero" class="form-control">
                   <option value=" ">-Select-</option>
-                  <option value="Masculino">Masculino</option>
-                  <option value="Femenino">Femenino</option>
-                  <option value="Otro">Otro</option>
+                  <option value="M">Masculino</option>
+                  <option value="F">Femenino</option>
+                  <option value="O">Otro</option>
                 </select>
               </div>
               <div class="form-group">
@@ -39,4 +41,3 @@
           </form>
           </div>
 </section>
-<?php echo $mensaje; ?>

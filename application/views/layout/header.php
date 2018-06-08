@@ -12,7 +12,7 @@
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/font-awesome/css/font-awesome.min.css">
     <!-- Google fonts - Poppins-->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
     <!-- Lightbox-->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/lightbox2/css/lightbox.css">
     <!-- Custom font icons-->
@@ -74,7 +74,6 @@
               </div>
               <span id="alert_action"></span>
             </form>
-            <?php echo $mensaje;?>
           </div>
         </div>
       </div>

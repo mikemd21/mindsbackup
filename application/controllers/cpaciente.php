@@ -12,9 +12,9 @@ class Cpaciente extends CI_Controller
 		$this->load->model('mpaciente');
 	}
 	public function index(){
-		$data['mensaje'] = ' ';
-		$this->load->view('layout/header2');
-		$this->load->view('layout/registrar_paciente',$data);
+		$data['act'] = 'P';
+		$this->load->view('layout/header2',$data);
+		$this->load->view('layout/registrar_paciente');
 		$this->load->view('layout/footer');
 	}
 
@@ -27,11 +27,6 @@ class Cpaciente extends CI_Controller
         $param['clavep'] = '';
 		//Datos Usuario
 		$lastId = $this->mpersona->guardar($param);
-		$data['mensaje'] = ' ';
-
-		$this->load->view('layout/header',$data);
-		$this->load->view('index');
-		$this->load->view('layout/footer');
 
 		// Datos del paciente
 		if ($lastId>0) {
@@ -39,9 +34,18 @@ class Cpaciente extends CI_Controller
 			$paramPa['fechaNa'] = $this->input->post('txtDate');
 			$paramPa['genero'] = $this->input->post('txtGenero');
 
-		 	if ($this->input->post('txtDate') && $this->input->post('txtGenero') != 0) {
-				$this->mpaciente->guardarPaciente($paramPa);
-			}
-	}
+		 	if ($this->input->post('txtDate') != '' && $this->input->post('txtGenero') != '') {
+				$res = $this->mpaciente->guardarPaciente($paramPa);
+                if ($res){
+                    echo 'OK';
+                }else{
+                    echo 'Comuniquese con el administrador de la aplicacion';
+                }
+			}else{
+                echo 'Comuniquese con el administrador de la aplicacion';
+            }
+	   }else{
+            echo 'Comuniquese con el administrador de la aplicacion';
+        }
 }
 }
