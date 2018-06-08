@@ -33,7 +33,7 @@
                 </select>
               </div>
               <div class="form-group">
-                <button type="submit"class="btn btn-primary">Registrar</button>
+                <button type="submit" class="btn btn-primary">Registrar</button>
               </div>
             </div>
           </form>

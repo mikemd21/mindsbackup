@@ -59,6 +59,7 @@
           </div>
           <div class="modal-body p-4 p-lg-5">
             <form action="<?php echo base_url();?>clogin/ingresar" method="POST" class="login-form text-left" id="lform">
+
               <div class="form-group mb-4">
                 <label>Correo Electrónico</label>
                 <input type="email" name="txtEmail" placeholder="ejemplo@ejemplo.com" class="form-control">
@@ -71,6 +72,7 @@
                 <!--<input type="submit" value="Iniciar Sesión" class="btn btn-primary">-->
                 <button type="submit" class="btn btn-primary">Inicia Sesión</button>
               </div>
+              <span id="alert_action"></span>
             </form>
             <?php echo $mensaje;?>
           </div>

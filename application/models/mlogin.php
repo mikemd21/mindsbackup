@@ -7,7 +7,6 @@ class Mlogin extends CI_Model
  public function ingresar($email,$pass){
  		$this->db->select('id_persona, nombres, apellido_paterno, apellido_materno');
  		$this->db->from('persona ');
- 		//$this->db->join('persona p', 'p.id = u.idPersona');
  		$this->db->where('email', $email);
  		$this->db->where('password',$pass);
 

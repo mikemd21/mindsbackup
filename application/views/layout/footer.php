@@ -1,10 +1,7 @@
  <footer class="main-footer">
       <div class="container">
         <div class="row">
-          <div class="col-lg-3 mb-5 mb-lg-0">
-            <div class="footer-logo"><img src="<?php echo base_url();?>assets/img/logo-footer.svg" alt="..." class="img-fluid"></div>
-          </div>
-          <div class="col-lg-3 mb-5 mb-lg-0">
+          <div class="col-lg-3 mb-5 mb-lg-0 offset-lg-2">
             <h5 class="footer-heading">Site pages</h5>
             <ul class="list-unstyled">
               <li> <a href="index.html" class="footer-link">Home</a></li>
@@ -57,6 +54,6 @@
     <script src="<?php echo base_url();?>assets/vendor/jquery.cookie/jquery.cookie.js"> </script>
     <script src="<?php echo base_url();?>assets/vendor/lightbox2/js/lightbox.js"></script>
     <script src="<?php echo base_url();?>assets/js/front.js"></script>
-    <script type="text/JavaScript"> src="<?php echo base_url();?>js/personas.js"></script>
+    <script src="<?php echo base_url();?>js/persona.js"></script>
   </body>
 </html>
