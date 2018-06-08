@@ -12,7 +12,7 @@
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/font-awesome/css/font-awesome.min.css">
     <!-- Google fonts - Poppins-->
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
     <!-- Lightbox-->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/vendor/lightbox2/css/lightbox.css">
     <!-- Custom font icons-->
@@ -41,10 +41,10 @@
               <li class="nav-item"> <a href="<?php echo base_url();?>cpaciente" class="nav-link ">Paciente</a></li>
               <li class="nav-item"> <a href="index.html" class="nav-link">Actividades</a></li>
               <li class="nav-item"> <a href="#" data-toggle="modal" data-target="#login" class="nav-link ">Agenda</a></li>
-              <li class="nav-item"> <a href="<?php echo base_url();?>" class="nav-link active">Salir</a></li>
               <!-- Link-->
 
-            </ul>
+            </ul><a href="<?php echo base_url();?>" class="btn btn-link navbar-btn ml-0"><?php echo $this->session->userdata('s_persona');
+         ?></a>
           </div>
         </div>
       </nav>

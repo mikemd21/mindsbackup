@@ -17,12 +17,8 @@ class Mpaciente extends CI_Model
 		);
 		$this->db->insert('paciente',$campos);
 
-        return true;
+        return $this->db->insert_id();
 	}
-	public function eliminarUsuario($idP){
- 		$campos = array('idPersona' => $idP);
- 		$this->db->delete('usuario',$campos);
- 	}
 }
 
  ?>

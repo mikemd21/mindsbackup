@@ -10,6 +10,7 @@ class Cpaciente extends CI_Controller
 		parent::__construct();
 		$this->load->model('mpersona');
 		$this->load->model('mpaciente');
+        $this->load->model('mfamiliar');
 	}
 	public function index(){
 		$data['act'] = 'P';
@@ -25,6 +26,7 @@ class Cpaciente extends CI_Controller
 		$param['apellidom'] = $this->input->post('txtApMaterno');
         $param['emailp'] = '';
         $param['clavep'] = '';
+        $param['tipo'] = $this->input->post('tipo');
 		//Datos Usuario
 		$lastId = $this->mpersona->guardar($param);
 
@@ -36,8 +38,15 @@ class Cpaciente extends CI_Controller
 
 		 	if ($this->input->post('txtDate') != '' && $this->input->post('txtGenero') != '') {
 				$res = $this->mpaciente->guardarPaciente($paramPa);
-                if ($res){
-                    echo 'OK';
+                if ($res > 0){
+                    $paramFa['idPaciente'] = $res;
+                    $res2 = $this->mfamiliar->actFamiliar($paramFa);
+
+                    if ($res2 > 0){
+                        echo 'OK';
+                    }else{
+                        echo 'Comuniquese con el administrador de la aplicacion1';
+                    }
                 }else{
                     echo 'Comuniquese con el administrador de la aplicacion';
                 }

@@ -22,21 +22,7 @@
 
  		return $this->db->insert_id();
  	}
- 	public function actualizarDatos($param){
- 		$campos = array(
- 			'nombre'=> $param['nombre'],
- 			'apellidop'=> $param['apellidop'],
- 			'apellidom'=> $param['apellidom'],
- 			'email'=> $param['email']);
- 		$this->db->where('id',$this->session->userdata('s_idPersona'));
- 		$this->db->update('persona',$campos);
 
- 		return 1;
- 	}
- 	public function eliminarPersona($idP){
- 		$this->db->where('id',$idP);
- 		$this->db->delete('persona');
- 	}
 }
 
  ?>

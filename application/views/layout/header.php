@@ -88,7 +88,7 @@
       <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
       </div>
       <div class="modal-body p-4 p-lg-5">
-        <form action="<?php echo base_url();?>cpersona/guardar" method="POST" class="contact-form text-left">
+        <form action="<?php echo base_url();?>cpersona/guardar" method="POST" class="contact-form text-left" id="rfform">
               <div class="form-group mb-4">
                 <label>Nombre.<sup class="text-primary">&#10033;</sup></label>
                 <input type="text" name="txtNombre" placeholder="Nombre" class="form-control">
@@ -109,9 +109,19 @@
                 <label>Contraseña.<sup class="text-primary">&#10033;</sup></label>
                 <input type="password" name="txtClave" placeholder="Máximo 8 caracteres" class="form-control">
               </div>
+              <div class="form-group mb-4">
+                <label>Dirección<sup class="text-primary">&#10033;</sup></label>
+                <input type="text" name="txtDir" placeholder="Calle 123" class="form-control">
+              </div>
+              <div class="form-group mb-4">
+                <label>Teléfono<sup class="text-primary">&#10033;</sup></label>
+                <input type="text" name="txtTel" placeholder="311-122-1222" class="form-control">
+              </div>
+              <input type="hidden" id="tipo" name="tipo" value="1"/>
               <div class="form-group">
                 <button type="submit"class="btn btn-primary">Registrarse</button>
               </div>
+              <span id="alert_action2"></span>
             </form>
       </div>
     </div>

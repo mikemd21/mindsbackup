@@ -24,8 +24,6 @@ class Mlogin extends CI_Model
  		}else{
  			return $resultado->num_rows();
  		}
-
-
  	}
 
 }

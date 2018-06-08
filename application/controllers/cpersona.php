@@ -10,6 +10,7 @@ class Cpersona extends CI_Controller
 		parent::__construct();
 		$this->load->model('mpersona');
 		$this->load->model('mpaciente');
+        $this->load->model('mfamiliar');
 	}
 	public function index(){
         $data['mensaje'] = ' ';
@@ -25,20 +26,21 @@ class Cpersona extends CI_Controller
 		$param['emailp'] = $this->input->post('txtEmail');
 		$param['clavep'] = sha1($this->input->post('txtClave'));
 
+
 		$lastId = $this->mpersona->guardar($param);
 
-		//Datos Usuario
+		if ($this->input->post('tipo') == "1"){
+            $paramF['idPersona'] = $lastId;
+            $paramF['direccion'] = $this->input->post('txtDir');
+		    $paramF['telefono'] = $this->input->post('txtTel');
+            $res = $this->mfamiliar->guardarFamiliar($paramF);
+        }
 
-		$data['mensaje'] = ' ';
-
-		$this->load->view('layout/header',$data);
-		$this->load->view('index');
-		$this->load->view('layout/footer');
-		/*if ($lastId>0) {
-			$paramUser['idPersona'] = $lastId;
-			//$this->musuario->guardarUsuario($paramUser);
-		}
-	*/
+        if ($lastId > 0 && $res>0){
+           echo "OK";
+        }else{
+            echo "Comuniquese con el administrador de la página";
+        }
 	}
 
 	public function actualizarDatos(){
@@ -50,6 +52,7 @@ class Cpersona extends CI_Controller
 		$this->mpersona->actualizarDatos($param);
 		$this->load->view('personas/vregpersonas');
 	}
+
 	public function eliminarPersona(){
         $data['mensaje'] = ' ';
 		$idP = $this->input->post('txtIdP');

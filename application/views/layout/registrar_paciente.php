@@ -28,7 +28,7 @@
               <div class="form-group mb-4">
                 <label>Genero<sup class="text-primary">&#10033;</sup></label>
                 <select name="txtGenero" class="form-control">
-                  <option value=" ">-Select-</option>
+                  <option value=" ">-Selecione-</option>
                   <option value="M">Masculino</option>
                   <option value="F">Femenino</option>
                   <option value="O">Otro</option>
@@ -38,6 +38,7 @@
                 <button type="submit" class="btn btn-primary">Registrar</button>
               </div>
             </div>
+            <input type="hidden" id="tipo" name="tipo" value="2"/>
           </form>
           </div>
 </section>
