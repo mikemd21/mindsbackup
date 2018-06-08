@@ -22,7 +22,7 @@
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/DB_MB_APPs/';
+$config['base_url'] = 'http://localhost/MB_APP/';
 
 /*
 |--------------------------------------------------------------------------

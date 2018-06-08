@@ -9,7 +9,6 @@ class Clogin extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('mlogin');
-		$this->load->library('encrypt');
 	}
 
 	public function index(){
@@ -20,7 +19,7 @@ class Clogin extends CI_Controller
 	}
 	public function ingresar(){
 		$email = $this->input->post('txtEmail');
-		$pass = $this->encrypt->sha1($this->input->post('txtPassword'));
+		$pass = $this->input->post('txtPassword');
 
 		$result = $this->mlogin->ingresar($email,$pass);
 
